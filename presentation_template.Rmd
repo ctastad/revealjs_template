@@ -1,0 +1,67 @@
+---
+title: "Cool Title"
+author: "Chris Tastad"
+date: "`r format(Sys.time(), '%b %d, %Y')`"
+output:
+  revealjs::revealjs_presentation:
+    center: false
+    theme: night
+    highlight: zenburn
+    transition: none
+    reveal_options:
+      height: "100%"
+      margin: 0.04
+      slideNumber: true
+      previewLinks: true
+---
+
+
+## Section Title {.center}
+
+```{r global_options, include=F}
+knitr::opts_chunk$set(eval=F, echo=F, warning=F, message=F)
+```
+
+---
+
+## Slide Title
+
+<div class="column">
+
+### column1
+- some cool words
+
+### column2
+- some more cool words
+
+</div>
+
+---
+
+## Slide Title
+```{r eval=T}
+attach(mtcars)
+par(mfrow=c(2,2))
+plot(wt,mpg, main="Scatterplot of wt vs. mpg")
+plot(wt,disp, main="Scatterplot of wt vs disp")
+hist(wt, main="Histogram of wt")
+boxplot(wt, main="Boxplot of wt")
+```
+
+---
+
+
+## End {.center}
+
+<style>
+
+body {
+  background: #303030;
+}
+
+.column{
+  column-count: 2;
+}
+
+</style>
+
