@@ -9,36 +9,66 @@ output:
     highlight: zenburn
     transition: none
     reveal_options:
+      controls: false
       height: "100%"
       margin: 0.04
       slideNumber: true
       previewLinks: true
+      shuffle: true
 ---
 
+## First Section Title {.center}
+
+```{r global_options, include = F}
+knitr::opts_chunk$set(eval = F, echo = F, warning = F, message = F)
+```
+
+## Body
+
+## The End {.center}
+
+<!-- style -->
+
+<style>
+
+body {
+  background: #303030;
+}
+
+.column {
+  column-count: 2;
+}
+
+.sourceCode {
+  background-color: #3a3a3a;
+}
+
+.reveal .progress span {
+  background: #7f9f7f;
+}
+
+</style>
+
+<!-- slide templates
 
 ## Section Title {.center}
 
-```{r global_options, include=F}
-knitr::opts_chunk$set(eval=F, echo=F, warning=F, message=F)
-```
 
----
-
-## Slide Title
+## Multi-Column Slide
 
 <div class="column">
 
 ### column1
 - some cool words
+- https://www.merriam-webster.com/dictionary/wherever
 
 ### column2
 - some more cool words
 
 </div>
 
----
 
-## Slide Title
+## Figure Slide
 ```{r eval=T}
 attach(mtcars)
 par(mfrow=c(2,2))
@@ -48,20 +78,15 @@ hist(wt, main="Histogram of wt")
 boxplot(wt, main="Boxplot of wt")
 ```
 
----
 
+## Code Slide
 
-## End {.center}
+```{r echo = T}
+x = 1
+if x == 1:
+    # indented four spaces
+    print("x is 1.")
+```
 
-<style>
-
-body {
-  background: #303030;
-}
-
-.column{
-  column-count: 2;
-}
-
-</style>
+-->
 
