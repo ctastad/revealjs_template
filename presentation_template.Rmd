@@ -14,7 +14,6 @@ output:
       margin: 0.04
       slideNumber: true
       previewLinks: true
-      shuffle: true
 ---
 
 ## First Section Title {.center}
