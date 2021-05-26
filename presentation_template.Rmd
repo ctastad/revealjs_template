@@ -4,16 +4,20 @@ author: "Chris Tastad"
 date: "`r format(Sys.time(), '%b %d, %Y')`"
 output:
   revealjs::revealjs_presentation:
+    self_contained: false
     center: false
     theme: night
     highlight: zenburn
     transition: none
+    reveal_plugins: ["menu", "notes"]
     reveal_options:
-      controls: false
+      showNotes: "separate-page"
+      controls: true
       height: "100%"
       margin: 0.04
-      slideNumber: true
+      slideNumber: "c/t"
       previewLinks: true
+
 ---
 
 ## First Section Title {.center}
@@ -34,8 +38,12 @@ body {
   background: #2e3440;
 }
 
-.column {
-  column-count: 2;
+.container{
+    display: flex;
+}
+
+.col{
+    flex: 1;
 }
 
 div.sourceCode {
@@ -46,8 +54,21 @@ div.sourceCode {
   background-color: #393f4b;
 }
 
-.reveal .progress span {
-  background: #7f9f7f;
+.reveal section img {
+  border: 30px solid #e0e1e2;
+  border-radius: 10px;
+  }
+
+.reveal p {
+  text-align: left;
+}
+
+.reveal ul {
+  display: block;
+}
+
+.reveal ol {
+  display: block;
 }
 
 </style>
